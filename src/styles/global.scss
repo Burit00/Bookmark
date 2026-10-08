@@ -1,0 +1,21 @@
+@use 'variables' as v;
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap');
+
+:root {
+  // Colors
+  --clr-primary-blue: #{v.$clr-primary-blue};
+  --clr-primary-red: #{v.$clr-primary-red};
+  --clr-neutral-gray: #{v.$clr-neutral-gray};
+  --clr-neutral-darkblue: #{v.$clr-neutral-darkblue};
+
+  // Font
+  --font-weight-regular: #{v.$font-weight-regular};
+  --font-weight-bold: #{v.$font-weight-bold};
+}
+
+body {
+  font-family: v.$font-family-base;
+  font-size: v.$font-size-base;
+  font-weight: v.$font-weight-regular;
+}
