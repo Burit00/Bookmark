@@ -4,6 +4,7 @@
 
 :root {
   // Colors
+  --clr-primary-white: #{v.$clr-primary-white};
   --clr-primary-blue: #{v.$clr-primary-blue};
   --clr-primary-red: #{v.$clr-primary-red};
   --clr-neutral-gray: #{v.$clr-neutral-gray};
@@ -18,4 +19,5 @@ body {
   font-family: v.$font-family-base;
   font-size: v.$font-size-base;
   font-weight: v.$font-weight-regular;
+  background-color: var(--clr-primary-white);
 }
