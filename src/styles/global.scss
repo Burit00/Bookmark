@@ -9,6 +9,7 @@
   --clr-primary-red: #{v.$clr-primary-red};
   --clr-neutral-lightgray: #{v.$clr-neutral-lightgray};
   --clr-neutral-gray: #{v.$clr-neutral-gray};
+  --clr-neutral-darkgray: #{v.$clr-neutral-darkgray};
   --clr-neutral-darkblue: #{v.$clr-neutral-darkblue};
 
   // Font
@@ -60,4 +61,12 @@ h6 {
 p {
   line-height: 1.5em;
   color: hsl(var(--clr-neutral-gray));
+}
+
+button {
+  border: 0;
+  background: transparent;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
 }

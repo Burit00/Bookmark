@@ -33,8 +33,8 @@
   &--secondary {
     --button-background: hsl(var(--clr-neutral-lightgray));
     --button-background-hover: hsl(var(--clr-primary-white));
-    --button-color: hsl(var(--clr-neutral-gray));
-    --button-color-hover: hsl(var(--clr-neutral-gray));
+    --button-color: hsl(var(--clr-neutral-darkgray));
+    --button-color-hover: hsl(var(--clr-neutral-darkgray));
     --button-border-color: hsla(var(--clr-neutral-darkblue), 0);
     --button-shadow-color: hsl(var(--clr-neutral-darkblue));
     &:hover {
