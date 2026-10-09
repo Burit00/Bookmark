@@ -7,6 +7,7 @@
   --clr-primary-white: #{v.$clr-primary-white};
   --clr-primary-blue: #{v.$clr-primary-blue};
   --clr-primary-red: #{v.$clr-primary-red};
+  --clr-neutral-lightgray: #{v.$clr-neutral-lightgray};
   --clr-neutral-gray: #{v.$clr-neutral-gray};
   --clr-neutral-darkblue: #{v.$clr-neutral-darkblue};
 
@@ -17,8 +18,7 @@
   --font-family-base: #{v.$font-family-base};
 }
 
-html,
-body {
+html {
   color: hsl(var(--clr-neutral-darkblue));
   font-family: var(--font-family-base);
   font-size: var(--font-size-base);
@@ -46,4 +46,18 @@ a {
   &:hover {
     color: hsl(var(--clr-primary-red));
   }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-bold);
+}
+
+p {
+  line-height: 1.5em;
+  color: hsl(var(--clr-neutral-gray));
 }

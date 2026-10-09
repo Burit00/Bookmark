@@ -1,38 +1,68 @@
+@use '@/styles/variables' as v;
+
 .button {
-  --box-shadow-color: var(--clr-primary-blue);
+  --button-background: hsl(var(--clr-primary-blue));
+  --button-background-hover: hsl(var(--clr-primary-white));
+  --button-color: hsl(var(--clr-primary-white));
+  --button-color-hover: hsl(var(--clr-primary-blue));
+  --button-border-color: hsl(var(--clr-primary-blue));
+  --button-shadow-color: hsl(var(--clr-primary-blue));
 
+  padding: 0.8rem;
+  border: 2px solid var(--button-border-color);
   border-radius: 6px;
-  padding: 0.5rem 1.5rem;
+  color: var(--button-color);
+  background-color: var(--button-background);
   font: inherit;
-  -webkit-box-shadow: -5px 8px 11px -9px hsl(var(--box-shadow-color));
-  box-shadow: -5px 8px 11px -9px hsl(var(--box-shadow-color));
-
+  font-size: 0.8em;
+  font-weight: var(--font-weight-bold);
+  box-shadow: -5px 8px 11px -9px var(--button-shadow-color);
   transition: 0.2s ease-in-out;
 
   &:hover {
     cursor: pointer;
+    color: var(--button-color-hover);
+    background-color: var(--button-background-hover);
+  }
+
+  &:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+
+  &--secondary {
+    --button-background: hsl(var(--clr-neutral-lightgray));
+    --button-background-hover: hsl(var(--clr-primary-white));
+    --button-color: hsl(var(--clr-neutral-gray));
+    --button-color-hover: hsl(var(--clr-neutral-gray));
+    --button-border-color: hsla(var(--clr-neutral-darkblue), 0);
+    --button-shadow-color: hsl(var(--clr-neutral-darkblue));
+    &:hover {
+      --button-border-color: hsl(var(--clr-neutral-darkblue), 1);
+    }
   }
 
   &--danger {
-    color: hsl(var(--clr-primary-white));
-    background-color: hsla(var(--clr-primary-red), 1);
-    border: 2px solid hsl(var(--clr-primary-red));
-    --box-shadow-color: var(--clr-primary-red);
-
-    &:hover {
-      color: hsl(var(--clr-primary-red));
-      background-color: hsla(var(--clr-primary-white), 0);
-    }
+    --button-background: hsl(var(--clr-primary-red));
+    --button-background-hover: hsl(var(--clr-primary-white));
+    --button-color: hsl(var(--clr-primary-white));
+    --button-color-hover: hsl(var(--clr-primary-red));
+    --button-border-color: hsl(var(--clr-primary-red));
+    --button-shadow-color: hsl(var(--clr-primary-red));
   }
 
   &--outline {
-    color: hsl(var(--clr-primary-white));
-    background-color: hsla(var(--clr-primary-white), 0);
-    border: 2px solid hsl(var(--clr-primary-white));
+    --button-background: transparent;
+    --button-background-hover: hsla(var(--clr-primary-white), 0.1);
+    --button-color: hsl(var(--clr-primary-white));
+    --button-color-hover: hsl(var(--clr-primary-white));
+    --button-border-color: hsl(var(--clr-primary-white));
+    --button-shadow-color: transparent;
+    padding: 0.5rem 1rem;
     box-shadow: none;
+  }
 
-    &:hover {
-      background-color: hsla(var(--clr-primary-white), 0.1);
-    }
+  @media screen and (min-width: v.$breakpoint-mobile) {
+    padding: 0.8rem 1.5rem;
   }
 }

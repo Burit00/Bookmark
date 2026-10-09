@@ -1,0 +1,76 @@
+@use '@/styles/variables' as v;
+
+.hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  &__image {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+  }
+
+  &__img {
+    z-index: 2;
+    width: 100%;
+  }
+
+  &__blob {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    aspect-ratio: 8 / 5;
+    border-bottom-left-radius: 30%;
+    background-color: hsl(var(--clr-primary-blue));
+  }
+
+  &__text {
+    text-align: center;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  @media screen and (min-width: v.$breakpoint-mobile) {
+    flex-direction: row-reverse;
+
+    &__text {
+      padding-left: 10vw;
+      text-align: left;
+      align-items: start;
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    &__buttons {
+      justify-content: start;
+    }
+  }
+
+  @media screen and (min-width: v.$breakpoint-tablet) {
+    &__text h1 {
+      font-size: 2.3rem;
+    }
+  }
+}
