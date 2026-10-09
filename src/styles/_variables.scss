@@ -1,11 +1,11 @@
 // Colors
-$clr-primary-white: hsl(0, 0%, 100%);
+$clr-primary-white: 0, 0%, 100%;
 
-$clr-primary-blue: hsl(231, 69%, 60%);
-$clr-primary-red: hsl(0, 94%, 66%);
+$clr-primary-blue: 231, 69%, 60%;
+$clr-primary-red: 0, 94%, 66%;
 
-$clr-neutral-gray: hsl(229, 8%, 60%);
-$clr-neutral-darkblue: hsl(229, 31%, 21%);
+$clr-neutral-gray: 229, 8%, 60%;
+$clr-neutral-darkblue: 229, 31%, 21%;
 
 // Font
 $font-family-base: 'Rubik', sans-serif;
@@ -14,4 +14,4 @@ $font-weight-regular: 400;
 $font-weight-bold: 500;
 
 // Layout
-$breakpoint-desktop: 1440px;
+$breakpoint-mobile: 768px;

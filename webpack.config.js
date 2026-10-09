@@ -23,9 +23,10 @@ module.exports = {
           loader: 'css-loader',
           options: {
             modules: {
+              namedExport: false,
+              exportLocalsConvention: 'as-is',
               localIdentName: '[name]__[local]___[hash:base64:5]',
             },
-            esModule: false,
           },
         },
         'sass-loader',
@@ -54,6 +55,7 @@ module.exports = {
     }),
   ],
   devServer: {
+    host: '0.0.0.0',
     port: 3000,
     open: true,
     hot: true,

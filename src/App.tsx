@@ -1,5 +1,7 @@
+import { Header } from './containers/Header';
+
 const App = () => {
-  return <h1>Bookmark</h1>;
+  return <Header />;
 };
 
 export default App;

@@ -11,13 +11,39 @@
   --clr-neutral-darkblue: #{v.$clr-neutral-darkblue};
 
   // Font
+  --font-size-base: #{v.$font-size-base};
   --font-weight-regular: #{v.$font-weight-regular};
   --font-weight-bold: #{v.$font-weight-bold};
+  --font-family-base: #{v.$font-family-base};
 }
 
+html,
 body {
-  font-family: v.$font-family-base;
-  font-size: v.$font-size-base;
-  font-weight: v.$font-weight-regular;
-  background-color: var(--clr-primary-white);
+  color: hsl(var(--clr-neutral-darkblue));
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-regular);
+  background-color: hsl(var(--clr-primary-white));
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: hsl(var(--clr-neutral-darkblue));
+
+  &:hover {
+    color: hsl(var(--clr-primary-red));
+  }
 }

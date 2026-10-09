@@ -1,0 +1,38 @@
+.button {
+  --box-shadow-color: var(--clr-primary-blue);
+
+  border-radius: 6px;
+  padding: 0.5rem 1.5rem;
+  font: inherit;
+  -webkit-box-shadow: -5px 8px 11px -9px hsl(var(--box-shadow-color));
+  box-shadow: -5px 8px 11px -9px hsl(var(--box-shadow-color));
+
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &--danger {
+    color: hsl(var(--clr-primary-white));
+    background-color: hsla(var(--clr-primary-red), 1);
+    border: 2px solid hsl(var(--clr-primary-red));
+    --box-shadow-color: var(--clr-primary-red);
+
+    &:hover {
+      color: hsl(var(--clr-primary-red));
+      background-color: hsla(var(--clr-primary-white), 0);
+    }
+  }
+
+  &--outline {
+    color: hsl(var(--clr-primary-white));
+    background-color: hsla(var(--clr-primary-white), 0);
+    border: 2px solid hsl(var(--clr-primary-white));
+    box-shadow: none;
+
+    &:hover {
+      background-color: hsla(var(--clr-primary-white), 0.1);
+    }
+  }
+}
