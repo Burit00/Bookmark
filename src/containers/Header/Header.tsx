@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import styles from './Header.module.scss';
+import clsx from 'clsx';
 import logo from '@/assets/logo-bookmark.svg';
 import hamburger from '@/assets/icon-hamburger.svg';
-import { Icon } from '../../components/Icon';
-import { MobileNavigation } from '../MobileNavigation';
-import clsx from 'clsx';
+import { Icon } from '@/components/Icon';
 import { Button } from '@/components/Button';
+import { MobileNavigation } from './components/MobileNavigation';
+import styles from './Header.module.scss';
 
 const links = [
   { href: '#features', label: 'FEATURES' },

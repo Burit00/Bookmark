@@ -1,11 +1,11 @@
-import { Icon } from '../../components/Icon';
-import styles from './MobileNavigation.module.scss';
-import facebook from '@/assets/icon-facebook.svg';
-import twitter from '@/assets/icon-twitter.svg';
+import { clsx } from 'clsx';
+import { Icon } from '@/components/Icon';
+import { Button } from '@/components/Button';
 import logo from '@/assets/logo-bookmark-white.svg';
 import close from '@/assets/icon-close.svg';
-import { clsx } from 'clsx';
-import { Button } from '../../components/Button';
+import twitter from '@/assets/icon-twitter.svg';
+import facebook from '@/assets/icon-facebook.svg';
+import styles from './MobileNavigation.module.scss';
 
 type MobileNavigationProps = {
   isOpen: boolean;
