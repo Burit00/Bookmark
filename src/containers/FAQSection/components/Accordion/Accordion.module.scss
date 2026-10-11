@@ -1,0 +1,45 @@
+.accordion-item {
+  overflow: hidden;
+  border-bottom: 1px solid hsl(var(--clr-neutral-gray));
+
+  &__header {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1rem 1rem 0;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: hsl(var(--clr-primary-red));
+    }
+  }
+
+  &__label {
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__arrow {
+    flex: 0 0 18px;
+    transition: transform 0.2s ease-in-out;
+
+    &--open {
+      transform: rotate(180deg);
+
+      path {
+        stroke: hsl(var(--clr-primary-red));
+      }
+    }
+  }
+
+  &__content {
+    transition: height 0.2s ease-in-out;
+
+    p {
+      padding: 1rem 0;
+    }
+  }
+}
