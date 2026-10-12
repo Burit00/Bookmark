@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import styles from './FeaturesSection.module.scss';
 import clsx from 'clsx';
-import { Feature } from './components/Feature/Feature';
-import { FEATURES } from './features.data';
+import { Feature } from '@/components/Feature';
+import { FEATURES } from '@/data/features.data';
+import styles from './FeaturesSection.module.scss';
 
 export const FeaturesSection = () => {
   const [activeFeature, setActiveFeature] = useState(FEATURES[0]);
