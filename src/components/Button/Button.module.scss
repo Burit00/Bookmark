@@ -1,63 +1,68 @@
 @use '@/styles/variables' as v;
 
 .button {
-  --button-background: hsl(var(--clr-primary-blue));
-  --button-background-hover: hsl(var(--clr-primary-white));
-  --button-color: hsl(var(--clr-primary-white));
-  --button-color-hover: hsl(var(--clr-primary-blue));
-  --button-border-color: hsl(var(--clr-primary-blue));
-  --button-shadow-color: hsl(var(--clr-primary-blue));
+  --button-background: var(--clr-primary-blue);
+  --button-background-hover: var(--clr-primary-white);
+  --button-color: var(--clr-primary-white);
+  --button-color-hover: var(--clr-primary-blue);
+  --button-border-color: var(--clr-primary-blue);
+  --button-shadow-color: var(--clr-primary-blue);
 
   padding: 0.8rem;
-  border: 2px solid var(--button-border-color);
+  border: 2px solid hsl(var(--button-border-color));
   border-radius: 6px;
-  color: var(--button-color);
-  background-color: var(--button-background);
+  color: hsl(var(--button-color));
+  background-color: hsl(var(--button-background));
   font: inherit;
   font-size: 0.8em;
   font-weight: var(--font-weight-bold);
-  box-shadow: -5px 8px 11px -9px var(--button-shadow-color);
+  box-shadow: -5px 8px 11px -9px hsl(var(--button-shadow-color));
   transition: 0.2s ease-in-out;
   text-wrap: nowrap;
+  outline-offset: 2px;
 
   &:hover {
     cursor: pointer;
-    color: var(--button-color-hover);
-    background-color: var(--button-background-hover);
+    color: hsl(var(--button-color-hover));
+    background-color: hsl(var(--button-background-hover));
   }
 
   &:focus-visible {
-    outline: 2px solid currentColor;
-    outline-offset: 2px;
+    outline: 2px solid hsl(var(--button-border-color));
   }
 
   &--secondary {
-    --button-background: hsl(var(--clr-neutral-lightgray));
-    --button-background-hover: hsl(var(--clr-primary-white));
-    --button-color: hsl(var(--clr-neutral-darkgray));
-    --button-color-hover: hsl(var(--clr-neutral-darkgray));
-    --button-border-color: hsla(var(--clr-neutral-darkblue), 0);
-    --button-shadow-color: hsl(var(--clr-neutral-darkblue));
+    --button-background: var(--clr-neutral-lightgray);
+    --button-background-hover: var(--clr-primary-white);
+    --button-color: var(--clr-neutral-darkgray);
+    --button-color-hover: var(--clr-neutral-darkgray);
+    --button-border-color: var(--clr-neutral-lightgray);
+    --button-shadow-color: var(--clr-neutral-darkblue);
+
     &:hover {
-      --button-border-color: hsl(var(--clr-neutral-darkblue), 1);
+      --button-border-color: var(--clr-neutral-darkblue);
+    }
+
+    &:focus-visible {
+      outline: 2px solid hsl(var(--clr-neutral-darkblue));
     }
   }
 
   &--danger {
-    --button-background: hsl(var(--clr-primary-red));
-    --button-background-hover: hsl(var(--clr-primary-white));
-    --button-color: hsl(var(--clr-primary-white));
-    --button-color-hover: hsl(var(--clr-primary-red));
-    --button-border-color: hsl(var(--clr-primary-red));
-    --button-shadow-color: hsl(var(--clr-primary-red));
+    --button-background: var(--clr-primary-red);
+    --button-background-hover: var(--clr-primary-white);
+    --button-color: var(--clr-primary-white);
+    --button-color-hover: var(--clr-primary-red);
+    --button-border-color: var(--clr-primary-red);
+    --button-shadow-color: var(--clr-primary-red);
   }
 
   &--outline {
     --button-background: transparent;
-    --button-background-hover: hsla(var(--clr-primary-white), 0.1);
-    --button-color: hsl(var(--clr-primary-white));
-    --button-color-hover: hsl(var(--clr-primary-white));
-    --button-border-color: hsl(var(--clr-primary-white));
+    --button-background-hover: var(--clr-primary-white), 0.1;
+    --button-color: var(--clr-primary-white);
+    --button-color-hover: var(--clr-primary-white);
+    --button-border-color: var(--clr-primary-white);
     --button-shadow-color: transparent;
     padding: 0.5rem 1rem;
     box-shadow: none;
