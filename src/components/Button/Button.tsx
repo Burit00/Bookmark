@@ -4,15 +4,23 @@ import styles from './Button.module.scss';
 type ButtonVariants = 'primary' | 'secondary' | 'outline' | 'danger';
 
 type ButtonProps = {
+  type?: 'button' | 'submit' | 'reset';
   variant?: ButtonVariants;
   className?: string;
   onClick?: () => void;
   children?: React.ReactNode;
 };
 
-export const Button = ({ variant = 'primary', className, children, onClick }: ButtonProps) => {
+export const Button = ({
+  type = 'button',
+  variant = 'primary',
+  className,
+  children,
+  onClick,
+}: ButtonProps) => {
   return (
     <button
+      type={type}
       className={clsx(
         styles['button'],
         {

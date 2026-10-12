@@ -3,6 +3,7 @@ import { HeroSection } from './containers/HeroSection';
 import { FeaturesSection } from './containers/FeaturesSection';
 import { PluginsSection } from './containers/PluginsSection';
 import { FAQSection } from '@/containers/FAQSection';
+import { NewsletterSection } from '@/containers/NewsletterSection';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
       <FeaturesSection />
       <PluginsSection />
       <FAQSection />
+      <NewsletterSection />
     </div>
   );
 };
