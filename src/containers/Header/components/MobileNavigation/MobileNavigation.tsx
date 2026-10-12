@@ -1,6 +1,7 @@
 import { clsx } from 'clsx';
 import { Icon } from '@/components/Icon';
 import { Button } from '@/components/Button';
+import { LINKS } from '@/data/navigation.data';
 import logo from '@/assets/logo-bookmark-white.svg';
 import close from '@/assets/icon-close.svg';
 import twitter from '@/assets/icon-twitter.svg';
@@ -11,12 +12,6 @@ type MobileNavigationProps = {
   isOpen: boolean;
   onClose: () => void;
 };
-
-const links = [
-  { href: '#features', label: 'FEATURES' },
-  { href: '#pricing', label: 'PRICING' },
-  { href: '#contact', label: 'CONTACT' },
-];
 
 export const MobileNavigation = ({ isOpen, onClose }: MobileNavigationProps) => {
   return (
@@ -33,7 +28,7 @@ export const MobileNavigation = ({ isOpen, onClose }: MobileNavigationProps) => 
           <Icon src={close} alt="Close" onClick={onClose} />
         </div>
         <ul className={styles['mobile-nav__list']}>
-          {links.map((link) => (
+          {LINKS.map((link) => (
             <li className={styles['mobile-nav__item']} key={link.href}>
               <a href={link.href} onClick={onClose}>
                 {link.label}
