@@ -3,9 +3,6 @@ import { Icon } from '@/components/Icon';
 import { Button } from '@/components/Button';
 import { LINKS } from '@/data/navigation.data';
 import logo from '@/assets/logo-bookmark-white.svg';
-import close from '@/assets/icon-close.svg';
-import twitter from '@/assets/icon-twitter.svg';
-import facebook from '@/assets/icon-facebook.svg';
 import styles from './MobileNavigation.module.scss';
 
 type MobileNavigationProps = {
@@ -24,8 +21,8 @@ export const MobileNavigation = ({ isOpen, onClose }: MobileNavigationProps) => 
     >
       <div>
         <div className={styles['mobile-nav__header']}>
-          <Icon src={logo} alt="Bookmark Logo" className={styles['mobile-nav__logo']} />
-          <Icon src={close} alt="Close" onClick={onClose} />
+          <img src={logo} alt="Bookmark Logo" className={styles['mobile-nav__logo']} />
+          <Icon name="close" onClick={onClose} />
         </div>
         <ul className={styles['mobile-nav__list']}>
           {LINKS.map((link) => (
@@ -43,8 +40,8 @@ export const MobileNavigation = ({ isOpen, onClose }: MobileNavigationProps) => 
         </ul>
       </div>
       <div className={styles['mobile-nav__footer']}>
-        <Icon src={facebook} alt="Facebook" />
-        <Icon src={twitter} alt="Twitter" />
+        <Icon name="facebook" />
+        <Icon name="twitter" />
       </div>
     </nav>
   );

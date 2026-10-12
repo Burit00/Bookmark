@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import { clsx } from 'clsx';
 import styles from './Accordion.module.scss';
+import { Icon } from '@/components/Icon';
 
 export type AccordionData = {
   label: string;
@@ -21,16 +22,12 @@ const AccordionItem = ({ label, content }: AccordionItemProps) => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <span className={styles['accordion-item__label']}>{label}</span>
-        <svg
+        <Icon
+          name="arrow"
           className={clsx(styles['accordion-item__arrow'], {
             [styles['accordion-item__arrow--open']]: isOpen,
           })}
-          xmlns="http://www.w3.org/2000/svg"
-          width="18"
-          height="12"
-        >
-          <path fill="none" stroke="#5267DF" stroke-width="3" d="M1 1l8 8 8-8" />
-        </svg>
+        />
       </button>
       <div
         className={styles['accordion-item__content']}
