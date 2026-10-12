@@ -1,8 +1,8 @@
-import { Feature } from '@/components/Feature/Feature';
+import { animated, useTransition } from 'react-spring';
+import { Feature } from '@/components/Feature';
 import { Icon } from '@/components/Icon';
 import { FEATURES } from '@/data/features.data';
 import styles from './FeatureDialog.module.scss';
-import { animated, useTransition } from 'react-spring';
 
 const feature = FEATURES[1];
 
