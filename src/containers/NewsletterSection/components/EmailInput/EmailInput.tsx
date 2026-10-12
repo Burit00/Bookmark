@@ -1,8 +1,7 @@
 import { useState } from 'react';
-import { Icon } from '@/components/Icon';
-import errorIcon from '@/assets/icon-error.svg';
-import styles from './EmailInput.module.scss';
 import { clsx } from 'clsx';
+import { Icon } from '@/components/Icon';
+import styles from './EmailInput.module.scss';
 
 type EmailInputProps = {
   className?: string;
@@ -37,7 +36,7 @@ export const EmailInput = ({ className }: EmailInputProps) => {
           onBlur={() => setIsTouched(true)}
           className={styles['email-input__input']}
         />
-        <Icon src={errorIcon} alt="" className={styles['email-input__warning-icon']} />
+        <Icon name="error" className={styles['email-input__warning-icon']} />
       </label>
       <i className={styles['email-input__alert']}>Whoops, make sure it's an email</i>
     </div>

@@ -9,6 +9,7 @@
   width: 100%;
   height: 100vh;
 
+  color: hsl(var(--clr-primary-white));
   background-color: hsla(var(--clr-neutral-darkblue), 0.95);
 
   display: flex;
@@ -44,7 +45,6 @@
 
     a {
       color: hsl(var(--clr-primary-white));
-      cursor: pointer;
     }
 
     &:hover {
@@ -62,12 +62,6 @@
     align-items: center;
     gap: 2rem;
     padding-bottom: 3rem;
-
-    .icon {
-      &--action:hover {
-        cursor: pointer;
-      }
-    }
   }
 
   @media screen and (min-width: v.$breakpoint-mobile) {
