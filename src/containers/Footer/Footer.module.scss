@@ -1,0 +1,47 @@
+@use '@/styles/variables.scss' as v;
+
+.footer {
+  padding: 2rem 10%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: hsl(var(--clr-primary-white));
+  background-color: hsl(var(--clr-neutral-darkblue));
+
+  &__logo {
+    align-self: center;
+  }
+
+  &__link-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  &__link-item a {
+    font-size: 0.9rem;
+    color: hsl(var(--clr-primary-white));
+  }
+
+  &__socials {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  @media screen and (min-width: v.$breakpoint-mobile) {
+    flex-direction: row;
+
+    &__link-list {
+      flex-direction: row;
+    }
+
+    &__socials {
+      flex: 1;
+      align-self: center;
+      justify-content: end;
+    }
+  }
+}

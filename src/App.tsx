@@ -4,6 +4,7 @@ import { FeaturesSection } from './containers/FeaturesSection';
 import { PluginsSection } from './containers/PluginsSection';
 import { FAQSection } from '@/containers/FAQSection';
 import { NewsletterSection } from '@/containers/NewsletterSection';
+import { Footer } from '@/containers/Footer';
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
       <PluginsSection />
       <FAQSection />
       <NewsletterSection />
+      <Footer />
     </div>
   );
 };
