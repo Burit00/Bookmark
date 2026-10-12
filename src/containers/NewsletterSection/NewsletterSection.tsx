@@ -11,7 +11,9 @@ export const NewsletterSection = () => {
         <h2>Stay up-to-date with what we're doing</h2>
         <form className={styles['newsletter__form']}>
           <EmailInput className={styles['newsletter__input']} />
-          <Button variant="danger">Contact Us</Button>
+          <Button type="submit" variant="danger">
+            Contact Us
+          </Button>
         </form>
       </div>
     </section>
