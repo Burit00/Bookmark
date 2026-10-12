@@ -1,8 +1,8 @@
-import { clsx } from 'clsx';
 import { Feature } from '@/components/Feature/Feature';
 import { Icon } from '@/components/Icon';
 import { FEATURES } from '@/data/features.data';
 import styles from './FeatureDialog.module.scss';
+import { animated, useTransition } from 'react-spring';
 
 const feature = FEATURES[1];
 
@@ -12,18 +12,28 @@ type FeatureDialogProps = {
 };
 
 export const FeatureDialog = ({ isOpen, onClose }: FeatureDialogProps) => {
+  const dialogTransition = useTransition(isOpen, {
+    from: { opacity: 0, transform: 'translateY(-10px)' },
+    enter: { opacity: 1, transform: 'translateY(0)' },
+    config: { duration: 200 },
+  });
+
   return (
-    <div
-      className={clsx(styles['dialog'], {
-        [styles['dialog--open']]: isOpen,
-      })}
-    >
-      <div className={styles['dialog__head-bar']}>
-        <Icon name="close" className={styles['dialog__close-icon']} onClick={onClose} />
-      </div>
-      <div className={styles['dialog__content']}>
-        <Feature {...feature} />
-      </div>
-    </div>
+    <>
+      {dialogTransition((dialogTransitionStyle, item) =>
+        item ? (
+          <div className={styles['dialog-overlay']}>
+            <animated.div style={dialogTransitionStyle} className={styles['dialog']}>
+              <div className={styles['dialog__head-bar']}>
+                <Icon name="close" className={styles['dialog__close-icon']} onClick={onClose} />
+              </div>
+              <div className={styles['dialog__content']}>
+                <Feature {...feature} />
+              </div>
+            </animated.div>
+          </div>
+        ) : null,
+      )}
+    </>
   );
 };
