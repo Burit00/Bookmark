@@ -1,8 +1,8 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-module.exports = {
-  entry: './src/index.tsx', 
+module.exports = (env, argv) => ({
+  entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
@@ -13,7 +13,14 @@ module.exports = {
       {
         test: /\.(ts|tsx|js|jsx)$/,
         exclude: /node_modules/,
-        use: ['babel-loader'],
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              envName: argv.mode,
+            },
+          },
+        ],
       },
       {
       test: /\.module\.scss$/,
@@ -52,6 +59,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './src/index.html',
+      favicon: './public/favicon-32x32.png',
     }),
   ],
   devServer: {
@@ -60,4 +68,4 @@ module.exports = {
     open: true,
     hot: true,
   },
-};
+});
